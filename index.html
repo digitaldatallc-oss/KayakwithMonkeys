@@ -12,7 +12,9 @@
   <link rel="canonical" href="https://kayakwithmonkeys.com/" />
   <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/conditions.css" />
   <script defer src="assets/script.js"></script>
+  <script defer src="assets/conditions.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,6 +46,7 @@
         <a href="#pricing">Pricing</a>
         <a href="#wildlife">Wildlife</a>
         <a href="#river">River Guide</a>
+        <a href="#conditions">Conditions</a>
         <a href="#faq">FAQ</a>
         <a href="waiver.html">Waiver</a>
         <a class="button button-small" href="book.html">Book Now</a>
@@ -53,25 +56,8 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <video
-        class="hero-media hero-video"
-        id="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        poster="assets/images/hero-kayakers.jpg"
-        aria-hidden="true"
-      >
-        <source src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Kayak_Hokkaido_-_river_near_Lake_Shikotsu_-_2016_08_15_.webm" type="video/webm" />
-      </video>
+      <img class="hero-media" src="assets/images/hero-kayakers.jpg" alt="Kayakers paddling through Silver Springs State Park" />
       <div class="hero-overlay"></div>
-      <button class="hero-video-toggle" id="hero-video-toggle" type="button" aria-label="Pause background video" aria-pressed="false">
-        <span class="pause-icon" aria-hidden="true">Ⅱ</span>
-        <span class="play-icon" aria-hidden="true">▶</span>
-        <span class="video-toggle-text">Pause video</span>
-      </button>
       <div class="container hero-content">
         <p class="eyebrow">Silver Springs, Florida</p>
         <h1 id="hero-title">Paddle With Florida's Wild Monkeys</h1>
@@ -168,6 +154,99 @@
       </div>
     </section>
 
+
+    <section class="conditions-section" id="conditions" aria-labelledby="conditions-title">
+      <div class="container">
+        <div class="conditions-heading">
+          <div>
+            <p class="eyebrow dark">Live trip-planning data</p>
+            <h2 id="conditions-title">Today's Silver River Conditions</h2>
+            <p>Current forecast information for Silver Springs and near-real-time water measurements from the Silver River USGS monitoring station.</p>
+          </div>
+          <button class="conditions-refresh" id="conditions-refresh" type="button">Refresh data</button>
+        </div>
+
+        <div class="conditions-alert" id="conditions-alert" role="status" aria-live="polite">
+          Loading current weather and river measurements…
+        </div>
+
+        <div class="conditions-columns">
+          <section class="condition-panel" aria-labelledby="weather-panel-title">
+            <div class="condition-panel-header">
+              <div>
+                <span class="condition-source">NOAA / National Weather Service</span>
+                <h3 id="weather-panel-title">Weather at Silver Springs</h3>
+              </div>
+              <span class="condition-updated" id="weather-updated">Updating…</span>
+            </div>
+            <div class="condition-cards">
+              <article class="condition-card">
+                <span class="condition-label">Air temperature</span>
+                <strong id="air-temperature">--</strong>
+                <small id="air-temperature-detail">Current hourly forecast</small>
+              </article>
+              <article class="condition-card">
+                <span class="condition-label">Wind</span>
+                <strong id="wind-speed">--</strong>
+                <small id="wind-direction">Direction unavailable</small>
+              </article>
+              <article class="condition-card">
+                <span class="condition-label">Rain chance</span>
+                <strong id="rain-chance">--</strong>
+                <small>Current forecast period</small>
+              </article>
+              <article class="condition-card condition-card-wide">
+                <span class="condition-label">Forecast</span>
+                <strong id="weather-summary">Loading…</strong>
+                <small id="weather-period">Silver Springs, Florida</small>
+              </article>
+            </div>
+            <div class="active-alerts" id="active-alerts">Checking for active weather alerts…</div>
+          </section>
+
+          <section class="condition-panel" aria-labelledby="water-panel-title">
+            <div class="condition-panel-header">
+              <div>
+                <span class="condition-source">U.S. Geological Survey · Station 02239501</span>
+                <h3 id="water-panel-title">Silver River Water</h3>
+              </div>
+              <span class="condition-updated" id="water-updated">Updating…</span>
+            </div>
+            <div class="condition-cards">
+              <article class="condition-card">
+                <span class="condition-label">Water temperature</span>
+                <strong id="water-temperature">--</strong>
+                <small>Measured near Ocala</small>
+              </article>
+              <article class="condition-card">
+                <span class="condition-label">River flow</span>
+                <strong id="river-flow">--</strong>
+                <small>Cubic feet per second</small>
+              </article>
+              <article class="condition-card">
+                <span class="condition-label">Gage height</span>
+                <strong id="gage-height">--</strong>
+                <small>Monitoring-station reading</small>
+              </article>
+              <article class="condition-card condition-card-wide">
+                <span class="condition-label">Data status</span>
+                <strong id="water-status">Loading live measurements…</strong>
+                <small>USGS provisional data may be revised.</small>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <div class="conditions-footer">
+          <p><strong>Important:</strong> These readings are provided for trip planning only. Conditions can change quickly. Staff decisions, park notices, lightning, wind, flooding, and on-site observations control whether a trip operates.</p>
+          <div>
+            <a href="https://forecast.weather.gov/MapClick.php?lat=29.216389&lon=-82.057777" target="_blank" rel="noopener">Full NWS forecast</a>
+            <a href="https://waterdata.usgs.gov/monitoring-location/02239501/" target="_blank" rel="noopener">USGS Silver River station</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-light safety-section">
       <div class="container safety-grid">
         <div><p class="eyebrow dark">Prepared, not complicated</p><h2>Everything you need for a better paddle</h2><p>Premium equipment, a clear plan, and direct instructions keep the day focused on the river.</p></div>
@@ -184,20 +263,6 @@
       <figure><img src="assets/images/kayak-river.jpg" alt="Kayak on the clear Silver River" loading="lazy" /></figure>
       <figure><img src="assets/images/hero-kayakers.jpg" alt="Group kayaking at Silver Springs" loading="lazy" /></figure>
       <figure><img src="assets/images/silver-springs.jpg" alt="Silver Springs park grounds" loading="lazy" /></figure>
-    </section>
-
-    <section class="section section-dark" id="waiver">
-      <div class="container">
-        <div class="section-heading narrow">
-          <p class="eyebrow">Required before launch</p>
-          <h2>Sign Your Kayak Waiver</h2>
-          <p>Every adult participant must complete the digital liability waiver before the trip. A parent or legal guardian must complete the minor section for each participant under 18.</p>
-          <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-            <a class="button" href="waiver.html">Open &amp; Sign Waiver</a>
-            <a class="button button-ghost" href="book.html">Book Your Adventure</a>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="section section-light" id="faq">
