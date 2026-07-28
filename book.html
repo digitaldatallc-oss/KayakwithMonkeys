@@ -1,6 +1,149 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Book Your Silver River Kayak Adventure | Monkey Business Kayaks</title><meta name="description" content="Request a single or tandem kayak reservation for a self-guided Silver River adventure."><link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css"><script defer src="assets/script.js"></script></head><body>
-<header class="site-header scrolled" id="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="" width="48" height="48"><span><strong>Monkey Business</strong><small>Kayaks</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button><nav id="primary-nav" class="primary-nav"><a href="index.html#experience">Experience</a><a href="index.html#pricing">Pricing</a><a href="index.html#wildlife">Wildlife</a><a href="index.html#faq">FAQ</a></nav></div></header>
-<main><section class="page-hero"><div class="container"><p class="eyebrow">Reservation request</p><h1>Start your Silver River adventure</h1><p>Submit your preferred date and equipment. This launch version creates a ready-to-send reservation email; the FareHarbor checkout link can replace it as soon as the account URL is available.</p></div></section>
-<section class="section section-light"><div class="container booking-layout"><form class="booking-form" id="booking-form"><div class="form-grid"><div class="field"><label for="name">Full name</label><input id="name" name="name" required autocomplete="name"></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div><div class="field"><label for="phone">Mobile phone</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div><div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" required></div><div class="field"><label for="single">Single kayaks</label><select id="single" name="single"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div><div class="field"><label for="tandem">Tandem kayaks</label><select id="tandem" name="tandem"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div><div class="field full"><label for="notes">Questions or special details</label><textarea id="notes" name="notes" placeholder="Group size, children, accessibility needs, or other details"></textarea></div><div class="field full"><button class="button button-full" type="submit">Send Reservation Request</button></div></div><p class="fine-print" style="color:#5e6a65">Submitting opens your email app with the reservation details. No payment is collected on this page.</p></form><aside class="booking-sidebar"><div class="mini-card"><p class="eyebrow">Single kayak</p><h3 style="font-size:2rem">$59</h3><p>One kayak, paddle, PFD, dry bag, route map, briefing, and shuttle.</p></div><div class="mini-card"><p class="eyebrow">Tandem kayak</p><h3 style="font-size:2rem">$79</h3><p>One tandem, two paddles, two PFDs, dry bag, route map, briefing, and shuttle.</p></div><div class="booking-note"><h3>Before you book</h3><ul><li>Most trips take 3–4 hours.</li><li>Wildlife sightings are not guaranteed.</li><li>Weather can require rescheduling.</li><li>Never feed or approach wildlife.</li></ul></div></aside></div></section></main>
-<footer class="site-footer"><div class="container footer-bottom" style="margin-top:0"><span>© <span id="year"></span> Monkey Business Kayaks LLC</span><a href="index.html">Return home</a></div></footer>
-<script>document.getElementById('booking-form').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject=encodeURIComponent('Reservation request — '+d.get('date'));const body=encodeURIComponent(`Name: ${d.get('name')}\nEmail: ${d.get('email')}\nPhone: ${d.get('phone')}\nPreferred date: ${d.get('date')}\nSingle kayaks: ${d.get('single')}\nTandem kayaks: ${d.get('tandem')}\nNotes: ${d.get('notes')||'None'}`);location.href=`mailto:info@kayakwithmonkeys.com?subject=${subject}&body=${body}`})</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Your Silver River Kayak Adventure | Monkey Business Kayaks</title>
+  <meta name="description" content="Request a Friday, Saturday, or Sunday self-guided Silver River kayak reservation with departures at 8:00 AM, 11:00 AM, or 1:00 PM." />
+  <link rel="canonical" href="https://kayakwithmonkeys.com/book.html" />
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+  <header class="site-header scrolled" id="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-mark.svg" alt="" width="48" height="48" />
+        <span><strong>Monkey Business</strong><small>Kayaks</small></span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#wildlife">Wildlife</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="waiver.html">Waiver</a>
+        <a href="tel:+19549062227">Call 954-906-2227</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Reservation request</p>
+        <h1>Choose your paddle day</h1>
+        <p>Trips run Friday through Sunday with departures at 8:00 AM, 11:00 AM, and 1:00 PM. Submit your request below or call <a href="tel:+19549062227" style="color:inherit;text-decoration:underline">954-906-2227</a>.</p>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container booking-layout">
+        <form class="booking-form" id="booking-form">
+          <div class="form-grid">
+            <div class="field"><label for="name">Full name</label><input id="name" name="name" required autocomplete="name" /></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" /></div>
+            <div class="field"><label for="phone">Mobile phone</label><input id="phone" name="phone" type="tel" required autocomplete="tel" /></div>
+            <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" required /><small id="date-error" style="color:#9b2c2c;display:none">Please choose a Friday, Saturday, or Sunday.</small></div>
+            <div class="field"><label for="time">Departure time</label><select id="time" name="time" required><option value="">Choose a time</option><option>8:00 AM</option><option>11:00 AM</option><option>1:00 PM</option></select></div>
+            <div class="field"><label for="single">Single kayaks — $55 each</label><select id="single" name="single"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+            <div class="field"><label for="tandem">Tandem kayaks — $70 each</label><select id="tandem" name="tandem"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+            <div class="field full"><label for="notes">Questions or trip details</label><textarea id="notes" name="notes" placeholder="Group size, guests under 18, accessibility needs, or other details"></textarea></div>
+            <div class="field full" style="display:flex;flex-direction:row;align-items:flex-start;gap:10px"><input id="waiver-ack" name="waiver-ack" type="checkbox" required style="width:auto;margin-top:5px" /><label for="waiver-ack" style="font-weight:600">I understand that every adult participant must sign the digital waiver before launch, and a parent or legal guardian must sign for each minor.</label></div>
+            <div class="field full"><button class="button button-full" type="submit">Send Reservation Request</button></div>
+          </div>
+          <p class="fine-print" style="color:#5e6a65">This opens your email app with the request addressed to kayakwithmonkeys@gmail.com. No payment is collected and the reservation is not confirmed until Monkey Business Kayaks accepts it.</p>
+        </form>
+
+        <aside class="booking-sidebar">
+          <div class="mini-card"><p class="eyebrow">Single kayak</p><h3 style="font-size:2rem">$55</h3><p>One kayak, paddle, PFD, dry bag, route map, safety briefing, and return shuttle.</p></div>
+          <div class="mini-card"><p class="eyebrow">Tandem kayak</p><h3 style="font-size:2rem">$70</h3><p>One tandem, two paddles, two PFDs, dry bag, route map, safety briefing, and return shuttle.</p></div>
+          <div class="booking-note">
+            <h3>Reservation policies</h3>
+            <ul>
+              <li>Friday–Sunday departures only.</li>
+              <li>Departure times: 8:00 AM, 11:00 AM, and 1:00 PM.</li>
+              <li>Guests under 18 must be accompanied by an adult.</li>
+              <li>No dogs or other pets.</li>
+              <li>No refunds; eligible changes receive a raincheck.</li>
+              <li>Wildlife sightings are not guaranteed.</li>
+            </ul>
+          </div>
+          <div class="booking-note" style="background:#0b302b;color:#fff">
+            <p class="eyebrow" style="margin-bottom:10px">Required before launch</p>
+            <h3>Complete the digital waiver</h3>
+            <p style="color:rgba(255,255,255,.78)">Each adult participant must sign. A parent or legal guardian must complete the minor section for anyone under 18.</p>
+            <a class="button button-full" href="waiver.html">Sign the Waiver</a>
+          </div>
+          <div class="booking-note">
+            <h3>Contact</h3>
+            <p><a href="tel:+19549062227"><strong>954-906-2227</strong></a><br /><a href="mailto:kayakwithmonkeys@gmail.com">kayakwithmonkeys@gmail.com</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom" style="margin-top:0"><span>© <span id="year"></span> Monkey Business Kayaks LLC</span><a href="index.html">Return home</a></div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('booking-form');
+    const dateInput = document.getElementById('date');
+    const dateError = document.getElementById('date-error');
+    const params = new URLSearchParams(location.search);
+    const requestedType = params.get('type');
+
+    dateInput.min = new Date().toISOString().split('T')[0];
+    if (requestedType === 'single') document.getElementById('single').value = '1';
+    if (requestedType === 'tandem') document.getElementById('tandem').value = '1';
+
+    function isOperatingDay(value) {
+      if (!value) return false;
+      const day = new Date(value + 'T12:00:00').getDay();
+      return day === 5 || day === 6 || day === 0;
+    }
+
+    dateInput.addEventListener('change', () => {
+      const valid = isOperatingDay(dateInput.value);
+      dateError.style.display = valid ? 'none' : 'block';
+      dateInput.setCustomValidity(valid ? '' : 'Please choose a Friday, Saturday, or Sunday.');
+    });
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const data = new FormData(this);
+      const single = Number(data.get('single'));
+      const tandem = Number(data.get('tandem'));
+      const validDate = isOperatingDay(data.get('date'));
+
+      dateError.style.display = validDate ? 'none' : 'block';
+      dateInput.setCustomValidity(validDate ? '' : 'Please choose a Friday, Saturday, or Sunday.');
+      if (!validDate) return dateInput.reportValidity();
+      if (single + tandem < 1) {
+        alert('Please select at least one single or tandem kayak.');
+        return;
+      }
+
+      const estimatedTotal = single * 55 + tandem * 70;
+      const subject = encodeURIComponent(`Reservation request — ${data.get('date')} at ${data.get('time')}`);
+      const body = encodeURIComponent(
+`Name: ${data.get('name')}
+Email: ${data.get('email')}
+Phone: ${data.get('phone')}
+Preferred date: ${data.get('date')}
+Departure time: ${data.get('time')}
+Single kayaks: ${single} x $55
+Tandem kayaks: ${tandem} x $70
+Estimated total: $${estimatedTotal}
+Notes: ${data.get('notes') || 'None'}
+
+I understand this is a reservation request, not a confirmed reservation, and that the policy is rainchecks only with no refunds.`
+      );
+      location.href = `mailto:kayakwithmonkeys@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
