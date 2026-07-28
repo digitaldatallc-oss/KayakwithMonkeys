@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Monkey Business Kayaks logo mark">
+  <rect width="96" height="96" rx="26" fill="#e7b96f"/>
+  <path d="M19 66c17 8 41 9 59 0-7 13-18 19-30 19S26 79 19 66Z" fill="#0b302b"/>
+  <path d="M25 64h46l8 5H18l7-5Z" fill="#f8f4e8"/>
+  <circle cx="49" cy="36" r="17" fill="#0b302b"/>
+  <circle cx="34" cy="34" r="8" fill="#0b302b"/>
+  <circle cx="64" cy="34" r="8" fill="#0b302b"/>
+  <ellipse cx="49" cy="43" rx="10" ry="8" fill="#e7b96f"/>
+  <circle cx="44" cy="34" r="2" fill="#f8f4e8"/>
+  <circle cx="54" cy="34" r="2" fill="#f8f4e8"/>
+  <path d="M45 46c3 2 6 2 9 0" fill="none" stroke="#0b302b" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M29 19 71 62" stroke="#f8f4e8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M23 13 35 25M66 57l12 12" stroke="#0b302b" stroke-width="7" stroke-linecap="round"/>
+</svg>
