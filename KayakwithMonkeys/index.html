@@ -53,8 +53,25 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <img class="hero-media" src="assets/images/hero-kayakers.jpg" alt="Kayakers paddling through Silver Springs State Park" />
+      <video
+        class="hero-media hero-video"
+        id="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/images/hero-kayakers.jpg"
+        aria-hidden="true"
+      >
+        <source src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Kayak_Hokkaido_-_river_near_Lake_Shikotsu_-_2016_08_15_.webm" type="video/webm" />
+      </video>
       <div class="hero-overlay"></div>
+      <button class="hero-video-toggle" id="hero-video-toggle" type="button" aria-label="Pause background video" aria-pressed="false">
+        <span class="pause-icon" aria-hidden="true">Ⅱ</span>
+        <span class="play-icon" aria-hidden="true">▶</span>
+        <span class="video-toggle-text">Pause video</span>
+      </button>
       <div class="container hero-content">
         <p class="eyebrow">Silver Springs, Florida</p>
         <h1 id="hero-title">Paddle With Florida's Wild Monkeys</h1>
